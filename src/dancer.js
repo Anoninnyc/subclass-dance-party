@@ -1,31 +1,37 @@
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
- this.timeBetweenSteps=timeBetweenSteps;
+  this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancing trump"> <img class="dancing trump" src="/Users/student/Downloads/Donald-trump-4.png"></span>');
 
   this.setPosition(top, left);
 
-this.step(this.timeBetweenSteps);
+  this.step(this.timeBetweenSteps);
 };
 
 
 
 
 
- makeDancer.prototype.step = function(timeBetweenSteps) {
-  this.$node.animate({"left":"-=25px"}, "slow");
-   
-   this.$node.animate({"left":"+=25px"}, "slow");
+makeDancer.prototype.step = function(timeBetweenSteps) {
+  this.$node.animate({
+    "left": "-=25px"
+  }, "slow");
+
+  this.$node.animate({
+    "left": "+=25px"
+  }, "slow");
   var xxx = this;
-  setTimeout(function(){xxx.step(this.timeBetweenSteps)},this.timeBetweenSteps);
-  };
+  setTimeout(function() {
+    xxx.step(this.timeBetweenSteps)
+  }, this.timeBetweenSteps);
+};
 
 
 makeDancer.prototype.setPosition = function(top, left) {
-  
-    var styleSettings = {
-      top: top,
-      left: left
-    };
-    this.$node.css(styleSettings);
+
+  var styleSettings = {
+    top: top,
+    left: left
   };
+  this.$node.css(styleSettings);
+};
