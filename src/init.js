@@ -1,6 +1,3 @@
-
-
-  
   window.dancers = [];
 
   $('.lineUp').click(function(event) {
@@ -12,11 +9,6 @@
     }, "fast");
   });
 
-
-
- //905 1323
-
-//($("body").height()/4) * Math.random())+ .53*$("body").height()
   $('.addDancerButton').on('click', function(event) {
     
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -76,8 +68,6 @@ $(".Berniess").delay("slow").fadeIn();
   $(".Berniess").delay("slow").fadeOut(3000);
 }
 
-
-
     var array = $(this).attr('style').split(' ');
     var stringTop = array[1].slice(0, array[1].length - 3);
     var stringLeft = array[3].slice(0, array[3].length - 3);
@@ -90,15 +80,10 @@ $(".Berniess").delay("slow").fadeIn();
     var left = person[2]
     var top = person[1]
 
-    
-
-
     $(this).delay("slow").animate({
       "left": left + "px",
       "top": top + "px"
     }, "slow")
-
-
 
     $(this).delay("slow").animate({
       "left": stringLeft + "px",
@@ -107,15 +92,4 @@ $(".Berniess").delay("slow").fadeIn();
 
   });
 
-
-
-
-
-
-
-
-
-
   });
-
-
